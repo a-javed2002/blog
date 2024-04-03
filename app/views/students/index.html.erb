@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>Student Data</h2>
+
+<%= link_to 'New Student',new_student_path %>
+
+<table style="width:100%">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+  <% @students.each do |student| %>
+  <tr>
+    <td><%= student.first_name %></td>
+    <td><%= student.last_name %></td>
+    <td><%= student.email %></td>
+    <td>
+      <%= link_to 'View', student %>
+      <%= link_to 'Edit', edit_student_path(student)%>
+      <%= link_to 'Delete', student, method: :delete, data:{confirm: 'Are You Sure?'}%>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<p>To understand the example better, we have added borders to the table.</p>
+
+</body>
+</html>
+
