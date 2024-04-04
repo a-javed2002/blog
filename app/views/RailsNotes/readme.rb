@@ -17,7 +17,7 @@
 # rails db:migrate
 # rails db:rollback
 
-# domain-specific languages DSL in ruby
+# domain-special languages DSL in ruby
 
 # rails g migration add_columns_to_students address:string contact_number:string
 # rails db:migrate
@@ -45,3 +45,20 @@
 # Student.last
 # quit or exit
 
+
+
+# $ bin/rails routes
+#       Prefix Verb   URI Pattern                  Controller#Action
+#         root GET    /                            articles#index
+#     articles GET    /articles(.:format)          articles#index
+#  new_article GET    /articles/new(.:format)      articles#new
+#      article GET    /articles/:id(.:format)      articles#show
+#              POST   /articles(.:format)          articles#create
+# edit_article GET    /articles/:id/edit(.:format) articles#edit
+#              PATCH  /articles/:id(.:format)      articles#update
+#              DELETE /articles/:id(.:format)      articles#destroy
+
+
+
+# rails generate scaffold course name:string description:text
+# rails db:migrate
